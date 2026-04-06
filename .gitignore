@@ -1,0 +1,12 @@
+# Python
+__pycache__/
+*.pyc
+venv/
+.env
+
+# C#
+bin/
+obj/
+*.user
+*.suo
+.vs/
