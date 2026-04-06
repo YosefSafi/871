@@ -101,11 +101,15 @@ namespace RoguelikeClient
                     int tile = map[x][y].GetInt32();
                     if (tile == 1) // Wall
                     {
-                        canvas.SetPixel(x, y, Color.Grey);
+                        canvas.SetPixel(x, y, new Color(100, 100, 100)); // Dark grey wall
                     }
-                    else
+                    else if (tile == 2) // Fog
                     {
-                        canvas.SetPixel(x, y, Color.Black); // Floor
+                        canvas.SetPixel(x, y, Color.Black); // Complete darkness
+                    }
+                    else // Floor (0)
+                    {
+                        canvas.SetPixel(x, y, new Color(30, 30, 30)); // Faintly visible floor
                     }
                 }
             }
